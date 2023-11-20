@@ -17,6 +17,7 @@ export const useDate = (): ReturnDate => {
   const date = `${day}, ${today.getDate()} ${today.toLocaleDateString(locale, { month: 'long' })}\n\n`;
 
   return {date};
+  
 };
 
 
@@ -66,7 +67,7 @@ const Today = () => {
           />
         </div>
       </div>
-      
+
       <div className="flex flex-col w-[80vw] h-fit bg-ct-sidebar-bg rounded pl-10 p-2">  
         <div>
           <h2>Add New Task </h2>
