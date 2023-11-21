@@ -23,7 +23,6 @@ export const useDate = (): ReturnDate => {
 
 
 const Today = () => {
-  // const[setTab] =useState("");
   const {date} = useDate();
 
   const[input, setInput]=useState("");
@@ -49,32 +48,30 @@ const Today = () => {
         </div>
       </div>
     </Header>
+    <hr/>
     
-    {/* <body className="today-body"> */}
       
-      <div className="flex flex-col w-[80vw] h-fit bg-ct-sidebar-bg rounded pl-10 p-2">
-        <div>
-          <h2>Todolist Today</h2>
-          <TodosList 
-            todos={todos}
-            setTodos={setTodos}
-          />
-        </div>
+    <div className="flex flex-col w-[80vw] h-fit bg-ct-sidebar-bg rounded pl-10 p-2">
+      <div>
+        <h2>Tasks Today</h2>
+        <TodosList 
+          todos={todos}
+          setTodos={setTodos}
+        />
       </div>
-      
-      <div className="flex flex-col w-[80vw] h-fit bg-ct-sidebar-bg rounded pl-10 p-2">  
-        <div>
-        <h3>Add new task</h3>
-          <TodoForm 
-            input={input}
-            setInput={setInput}
-            todos={todos}
-            setTodos={setTodos}
-          />
-        </div>
+    </div>
+    <hr />
+    <div className="flex flex-col w-[80vw] h-fit bg-ct-sidebar-bg rounded pl-10 p-2">  
+      <div>
+      <h3>Add new task</h3>
+        <TodoForm 
+          input={input}
+          setInput={setInput}
+          todos={todos}
+          setTodos={setTodos}
+        />
       </div>
-
-    {/* </body> */}
+    </div>
   </div>
   );
 };

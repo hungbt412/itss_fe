@@ -10,24 +10,31 @@ const TodoForm = ({input,setInput,todos,setTodos}) => {
             setTodos([...todos,{id:uuidv4(), title:input , completed:false }]);
             setInput("");      
     };
+
+
     const lvOptions = [
         { key: 'Important',
         text: 'Important',
         value: 'Important',
-        label: { color: 'red', empty: true, circular: true },},
+        label: { color: 'red', empty: true, circular: true},},
         { key: 'Less Important',
         text: 'Less Important',
         value: 'Less Important',
         label: { color: 'yellow', empty: true, circular: true },},
+        { key: 'Normal',
+        text: 'Normal',
+        value: 'Normal',
+        label: { color: 'blue', empty: true, circular: true },},
         { key: 'UnImportant',
         text: 'UnImportant',
         value: 'UnImportant',
-        label: { color: 'green', empty: true, circular: true },},
+        label: { color: '', empty: true, circular: true },},
       ];
-  return (
+    
+    
+      return (
     
         <Form onSubmit={onFormSubmit}>
-           
             <Form.Input 
                 type="text" 
                 placeholder="Task name" 
@@ -39,12 +46,15 @@ const TodoForm = ({input,setInput,todos,setTodos}) => {
             <div class="flex flex-row-reverse ">
                 <Button className="ui button" color="gray" >Cancel</Button>
                 <Button className="ui button" color="red" type="submit" >Add</Button>
-                <Dropdown clearable options={lvOptions} defaultValue={lvOptions[2].value} selection />
-                
+                <Dropdown 
+                    clearable 
+                    options={lvOptions} 
+                    defaultValue={lvOptions[0].value} 
+                    selection   
+                />
             </div>
         </Form>
-     
-  )
+    )
 }
 
 export default TodoForm
