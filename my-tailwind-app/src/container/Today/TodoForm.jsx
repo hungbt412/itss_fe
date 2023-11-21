@@ -43,16 +43,20 @@ const TodoForm = ({input,setInput,todos,setTodos}) => {
                 required
                 onChange={onInputChange}
             />
-            <div class="flex flex-row-reverse ">
-                <Button className="ui button" color="gray" >Cancel</Button>
-                <Button className="ui button" color="red" type="submit" >Add</Button>
+            <div className="flex flex-row ">
                 <Dropdown 
+                    className="basis-2/3"
                     clearable 
                     options={lvOptions} 
                     defaultValue={lvOptions[0].value} 
                     selection   
                 />
+                
+                <Button className="ui button basis-1/6" style={{padding:'5px'}} color="gray" >Cancel</Button>
+                <Button className="ui button basis-1/4" style={{padding:'5px'}} color="red" type="submit" >Add</Button>
+
             </div>
+           
         </Form>
     )
 }

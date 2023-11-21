@@ -17,17 +17,11 @@ const PopUpFirst = ({setPopup1}) => {
         left: '50%',
         transform: 'translate(-50%, -50%)',
         backgroundColor: '#FFF',
-        padding: '50px',
-        zIndex: 1000
-        // width: '300px',
-        // height: '420px',
-        // borderRadius: '12px',
-        // backgroundColor: 'white',
-        // boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
-        // display: 'flex',
-        // flexDirection: 'column',
-        // padding: '25px',
-
+        zIndex: 1000,
+        padding: '10px',
+        borderRadius: '12px',
+        boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
+        
     }
     
     const popupBackground = {

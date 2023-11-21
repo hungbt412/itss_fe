@@ -32,11 +32,11 @@ const Today = () => {
 
   return (
   <div>
-    <Header className="flex flex-col w-[80vw] h-[10vh] bg-ct-sidebar-bg rounded p-10" >
+    <Header className="flex flex-col w-[80vw] h-[10vh] rounded p-10" >
       <div className="flex justify-between">
         <div class="">
-          <strong className="font-lagre text-[30px] "> Today </strong> 
-          <span style={{color: '#6F6F6F'}}> {date} </span>
+          <strong className="font-lagre text-[26px] p-3"> Today </strong> 
+          <span style={{color: '#6F6F6F', fontSize:'14px'}}> {date} </span>
         </div>
 
         <div>
@@ -44,16 +44,15 @@ const Today = () => {
 
         <div className="flex items-center text-center gap-2">
           <CiCircleList className="font-light text-xl "  color="#6F6F6F" />
-          <p className=" font-light text-xl " style={{color: '#6F6F6F'}}>View</p>
+          <p className=" font-light text-xl " style={{color: '#6F6F6F',fontSize:'14px'}}>View</p>
         </div>
       </div>
     </Header>
     <hr/>
     
       
-    <div className="flex flex-col w-[80vw] h-fit bg-ct-sidebar-bg rounded pl-10 p-2">
+    <div className="flex flex-col w-[80vw] h-fit  rounded pl-10 p-2">
       <div>
-        <h2>Tasks Today</h2>
         <TodosList 
           todos={todos}
           setTodos={setTodos}
@@ -61,7 +60,7 @@ const Today = () => {
       </div>
     </div>
     <hr />
-    <div className="flex flex-col w-[80vw] h-fit bg-ct-sidebar-bg rounded pl-10 p-2">  
+    <div className="flex flex-col w-[80vw] h-fit  rounded pl-10 p-2">  
       <div>
       <h3>Add new task</h3>
         <TodoForm 
