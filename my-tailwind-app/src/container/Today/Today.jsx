@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { CiCircleList } from "react-icons/ci";
 import { Header} from "semantic-ui-react";
-import Form from "./Form";
 import TodosList from "./TodosList";
+import TodoForm from "./TodoForm";
 
 
 interface ReturnDate {
@@ -17,7 +17,6 @@ export const useDate = (): ReturnDate => {
   const date = `${day}, ${today.getDate()} ${today.toLocaleDateString(locale, { month: 'long' })}\n\n`;
 
   return {date};
-  
 };
 
 
@@ -44,19 +43,14 @@ const Today = () => {
         <div>
         </div>
 
-        <div
-          className="flex items-center text-center gap-2"
-          // onClick={() => {
-          //   setTab("view");
-          // }}
-        >
+        <div className="flex items-center text-center gap-2">
           <CiCircleList className="font-light text-xl "  color="#6F6F6F" />
           <p className=" font-light text-xl " style={{color: '#6F6F6F'}}>View</p>
         </div>
       </div>
     </Header>
     
-    <body className="today-body">
+    {/* <body className="today-body"> */}
       
       <div className="flex flex-col w-[80vw] h-fit bg-ct-sidebar-bg rounded pl-10 p-2">
         <div>
@@ -67,21 +61,20 @@ const Today = () => {
           />
         </div>
       </div>
-
+      
       <div className="flex flex-col w-[80vw] h-fit bg-ct-sidebar-bg rounded pl-10 p-2">  
         <div>
-          <h2>Add New Task </h2>
-          <Form 
+        <h3>Add new task</h3>
+          <TodoForm 
             input={input}
             setInput={setInput}
             todos={todos}
             setTodos={setTodos}
           />
         </div>
-        
       </div>
 
-    </body>
+    {/* </body> */}
   </div>
   );
 };

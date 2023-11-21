@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from 'semantic-ui-react'
 
 const TodosList = ({todos, setTodos, editTodo,setEditTodo}) => {
 
@@ -17,8 +18,8 @@ const TodosList = ({todos, setTodos, editTodo,setEditTodo}) => {
                     onChange={(event)=>event.preventDefault()}
                 />
                                   
-                <button className="button-complete"  onClick={()=>handleComplete(todo)} >Complete</button>
-                <button className="button-edit">Edit</button>                 
+                <Button className="ui button" color='green' onClick={()=>handleComplete(todo)} >Complete</Button>
+                <Button className="ui button" color='gray'>Edit</Button>                 
             </li>
         ))
 
