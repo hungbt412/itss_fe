@@ -3,7 +3,7 @@ import Sidebar from "../../layout/Sidebar/Sidebar";
 import Main from "../../layout/Main/Main";
 
 const TopPage = () => {
-  const [tab, setTab] = useState("today");
+  const [tab, setTab] = useState("upcoming");
   return (
     <div className="flex gap-4">
       {/* <div className="w-1/5">sidebar</div> */}

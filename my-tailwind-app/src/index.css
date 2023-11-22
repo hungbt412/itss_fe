@@ -17,5 +17,8 @@ code {
 }
 
 .sidebar-item {
-  @apply flex items-center rounded-sm mt-1 hover:bg-ct-button-hover;
+  @apply flex items-center rounded-sm mt-1 hover:bg-ct-button-hover cursor-pointer active:text-red-600 active:bg-ct-button-hover;
+}
+.active {
+  @apply bg-ct-button-hover text-red-500;
 }
