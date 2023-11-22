@@ -34,12 +34,12 @@ const Sidebar = ({ tab, setTab }) => {
           <PiRectangleLight className="font-light text-xl" color="#c0c0cd" />
         </div>
       </div>
-      <div className="flex items-center justify-center bg-ct-red rounded-sm mt-5 mb-4">
+      <div className="flex items-center justify-center bg-ct-red rounded-sm mt-5 mb-4 cursor-pointer">
         <PiPlus className="text-sm" color="white" />
         <p className="text-white font-medium text-[12px] p-1">Add task</p>
       </div>
       <div
-        className="sidebar-item"
+        className={tab === "search" ? "sidebar-item active" : "sidebar-item"}
         onClick={() => {
           setTab("search");
         }}
@@ -48,7 +48,7 @@ const Sidebar = ({ tab, setTab }) => {
         <p className=" font-medium text-[12px] p-1">Search</p>
       </div>
       <div
-        className="sidebar-item"
+        className={tab === "priority" ? "sidebar-item active" : "sidebar-item"}
         onClick={() => {
           setTab("priority");
         }}
@@ -57,7 +57,7 @@ const Sidebar = ({ tab, setTab }) => {
         <p className=" font-medium text-[12px] p-1">Priority</p>
       </div>
       <div
-        className="sidebar-item"
+        className={tab === "today" ? "sidebar-item active" : "sidebar-item"}
         onClick={() => {
           setTab("today");
         }}
@@ -66,7 +66,7 @@ const Sidebar = ({ tab, setTab }) => {
         <p className=" font-medium text-[12px] p-1">Today</p>
       </div>
       <div
-        className="sidebar-item"
+        className={tab === "upcoming" ? "sidebar-item active" : "sidebar-item"}
         onClick={() => {
           setTab("upcoming");
         }}
@@ -75,7 +75,7 @@ const Sidebar = ({ tab, setTab }) => {
         <p className="font-medium text-[12px] p-1">Upcoming</p>
       </div>
       <div
-        className="sidebar-item"
+        className={tab === "filter" ? "sidebar-item active" : "sidebar-item"}
         onClick={() => {
           setTab("filter");
         }}
